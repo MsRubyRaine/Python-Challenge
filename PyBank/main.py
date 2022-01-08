@@ -86,7 +86,17 @@ print("Greatest Decrease in Profits:"+ str(NoOfRows[BigChange1+1][0])+" ($"+str(
 
 
 # In[ ]:
-
+lines = [("Financial Analysis")
+("----------------------------")
+("Total Months:"+ str(len(NoOfRows)))
+("Total: $"+str(y))
+("Average Change: $"+str(AverageChange))
+("Greatest Increase in Profits:"+ str(NoOfRows[BigChange+1][0])+" ($"+str(max(ChangeList))+")")
+("Greatest Decrease in Profits:"+ str(NoOfRows[BigChange1+1][0])+" ($"+str(min(ChangeList))+")")]
+with open('readme.txt', 'w') as f:
+    for line in lines:
+        f.write(line)
+        f.write('\n')
 
 
 
